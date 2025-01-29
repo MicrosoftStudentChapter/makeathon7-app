@@ -19,8 +19,16 @@ class TracksPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text('Tracks', style: TextStyle(color: Colors.white, fontSize: 30),),
-            
+            Text('TRACKS', style: TextStyle(color: Colors.white, fontSize: 56),),
+            SizedBox(height: 160,),
+            Container(
+              color: AppPallete.redColorOpac,
+              // decoration: BoxDecoration(
+              //   // borderRadius: BorderRadius.circular(20),
+              //   color: AppPallete.greenColor,
+              // ),
+              height: 294, width: 267,
+            )
           ],
         ),
       ),
