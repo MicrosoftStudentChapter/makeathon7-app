@@ -103,7 +103,7 @@ class TracksPage extends StatelessWidget {
                               child: child,
                             );
                           },
-                          transitionDuration: Duration(milliseconds: 600),
+                          transitionDuration: Duration(milliseconds: 1000),
                         ));
                       },
                       label: Text(' TRACK TITLE',
@@ -130,7 +130,7 @@ class TracksPage extends StatelessWidget {
                               child: child,
                             );
                           },
-                          transitionDuration: Duration(milliseconds: 600),
+                          transitionDuration: Duration(milliseconds: 1000),
                         ));
                       },
                       label: Text(' TRACK TITLE',
@@ -157,7 +157,7 @@ class TracksPage extends StatelessWidget {
                               child: child,
                             );
                           },
-                          transitionDuration: Duration(milliseconds: 600),
+                          transitionDuration: Duration(milliseconds: 1000),
                         ));
                       },
                       label: Text(' TRACK TITLE',
@@ -184,7 +184,7 @@ class TracksPage extends StatelessWidget {
                               child: child,
                             );
                           },
-                          transitionDuration: Duration(milliseconds: 600),
+                          transitionDuration: Duration(milliseconds: 1000),
                         ));
                       },
                       label: Text(' TRACK TITLE',
@@ -204,6 +204,7 @@ class TracksPage extends StatelessWidget {
             ],
           ),
         ),
+        
       ),
     );
   }

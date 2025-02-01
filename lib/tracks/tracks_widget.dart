@@ -65,7 +65,7 @@ class TracksWidget extends StatelessWidget {
                               child: child,
                             );
                           },
-                          transitionDuration: Duration(milliseconds: 600),
+                          transitionDuration: Duration(milliseconds: 1000),
                         ));
                     }, icon: Icon(Icons.arrow_back_ios, size: 30, color: AppPallete.whiteColor,)),
                     Center(child: Text(
