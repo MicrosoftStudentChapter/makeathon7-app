@@ -13,9 +13,10 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
+          automaticallyImplyLeading: false,
           actions: [
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -28,9 +29,17 @@ class ProfilePage extends StatelessWidget {
             )
           ],
         ),
-        backgroundColor: Colors.transparent,
-        
-      ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+              'Profile',
+              style: TextStyle(
+                  color: Colors.white, fontSize: 56, fontFamily: 'IntroRust'),
+            ),
+            ],
+          ),
+        ),
     );
   }
 }
