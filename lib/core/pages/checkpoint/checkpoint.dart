@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/home_page.dart';
-import 'package:makeathon7/theme/app_pallete.dart';
 
 class Checkpoint extends StatelessWidget {
   const Checkpoint({super.key});
