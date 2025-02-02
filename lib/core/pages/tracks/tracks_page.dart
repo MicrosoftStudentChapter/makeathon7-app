@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
-import 'package:makeathon7/tracks/tracks_widget.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_widget.dart';
 
 class TracksPage extends StatelessWidget {
   const TracksPage({super.key});
@@ -9,11 +9,11 @@ class TracksPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('lib/images/background.png'),
-          fit: BoxFit.cover,
+          image: DecorationImage(
+            image: AssetImage('lib/assets/images/background.png'),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
@@ -64,7 +64,7 @@ class TracksPage extends StatelessWidget {
               ),
               ],
                 ),
-
+      
                 // child: ListView.builder(
                 //     itemBuilder: (context, index) {
                 //       return ListTile(
@@ -87,7 +87,7 @@ class TracksPage extends StatelessWidget {
                 //     shrinkWrap: true,
                 //     physics: ScrollPhysics(),
                 //   )
-
+      
                 child: Column(
                   children: [
                     SizedBox(
@@ -198,6 +198,7 @@ class TracksPage extends StatelessWidget {
                         color: AppPallete.whiteColor,
                       ),
                     ),
+      
                   ],
                 ),
               ),

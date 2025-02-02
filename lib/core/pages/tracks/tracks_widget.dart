@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:makeathon7/home_page.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
-import 'package:makeathon7/tracks/tracks_page.dart';
 
 class TracksWidget extends StatelessWidget {
   const TracksWidget({super.key});
@@ -9,32 +9,21 @@ class TracksWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('lib/images/background.png'),
-          fit: BoxFit.cover,
+          image: DecorationImage(
+            image: AssetImage('lib/assets/images/background.png'),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.notifications_active_sharp),
-                color: Colors.white,
-                iconSize: 37,
-              ),
-            )
-          ],
         ),
         body: Center(
           child: Container(
             width: 309,
-            height: 645,
+            height: 625,
             decoration: BoxDecoration(
               color: AppPallete.redColorOpac,
               borderRadius: BorderRadius.circular(27),
@@ -58,7 +47,7 @@ class TracksWidget extends StatelessWidget {
                   children: [
                     IconButton(onPressed: () {
                       Navigator.push(context, PageRouteBuilder(
-                          pageBuilder: (context, animation1, animation2) => TracksPage(),
+                          pageBuilder: (context, animation1, animation2) => HomePage(),
                           transitionsBuilder: (context, animation1, animation2, child) {
                             return FadeTransition(
                               opacity: animation1,
