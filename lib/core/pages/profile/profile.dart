@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:makeathon7/core/pages/announcements/announcements.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -21,7 +22,18 @@ class ProfilePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) => Announcements(),
+                          transitionsBuilder: (context, animation1, animation2, child) {
+                            return FadeTransition(
+                              opacity: animation1,
+                              child: child,
+                            );
+                          },
+                          transitionDuration: Duration(milliseconds: 1000),
+                        ));
+                },
                 icon: Icon(Icons.notifications_active_sharp),
                 color: Colors.white,
                 iconSize: 37,

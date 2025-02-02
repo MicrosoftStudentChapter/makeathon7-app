@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/core/pages/announcements/announcements.dart';
+import 'package:makeathon7/home_page.dart';
+import 'package:makeathon7/theme/app_pallete.dart';
 
-class TimelinePage extends StatelessWidget {
-  const TimelinePage({super.key});
+class Announcements extends StatelessWidget {
+  const Announcements({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +17,11 @@ class TimelinePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          automaticallyImplyLeading: false,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.push(context, PageRouteBuilder(
-                          pageBuilder: (context, animation1, animation2) => Announcements(),
+          leading: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: IconButton(onPressed: () {
+              Navigator.push(context, PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) => HomePage(),
                           transitionsBuilder: (context, animation1, animation2, child) {
                             return FadeTransition(
                               opacity: animation1,
@@ -33,7 +30,15 @@ class TimelinePage extends StatelessWidget {
                           },
                           transitionDuration: Duration(milliseconds: 1000),
                         ));
-                },
+            }, icon: Icon(Icons.arrow_back_ios_new, color: AppPallete.whiteColor, size: 37,)),
+          ),
+          backgroundColor: Colors.transparent,
+          automaticallyImplyLeading: false,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: IconButton(
+                onPressed: () {},
                 icon: Icon(Icons.notifications_active_sharp),
                 color: Colors.white,
                 iconSize: 37,
@@ -45,7 +50,7 @@ class TimelinePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-              'Timeline',
+              'Announcements',
               style: TextStyle(
                   color: Colors.white, fontSize: 56, fontFamily: 'IntroRust'),
             ),
