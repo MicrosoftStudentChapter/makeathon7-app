@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                       ));
           },
           backgroundColor: Colors.transparent,
-          child: Image.asset('lib/images/callButton.png'),
+          child: Image.asset('lib/assets/images/callButton.png'),
         ),
       bottomNavigationBar: CurvedNavigationBar(
         color: AppPallete.backgroundColor,
