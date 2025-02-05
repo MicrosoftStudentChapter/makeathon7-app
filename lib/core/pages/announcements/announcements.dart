@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/home_page.dart';
-import 'package:makeathon7/theme/app_pallete.dart';
+import 'package:makeathon7/core/pages/homepage/home_page.dart';
 
 class Announcements extends StatelessWidget {
   const Announcements({super.key});
@@ -11,46 +10,54 @@ class Announcements extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('lib/assets/images/background.png'),
-              fit: BoxFit.cover,
-            ),
+          image: DecorationImage(
+            image: AssetImage('lib/assets/images/background.png'),
+            fit: BoxFit.cover,
           ),
+        ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             leading: GestureDetector(
-                onTap: () {
-                  Navigator.push(context, PageRouteBuilder(
-                              pageBuilder: (context, animation1, animation2) => HomePage(),
-                              transitionsBuilder: (context, animation1, animation2, child) {
-                                return FadeTransition(
-                                  opacity: animation1,
-                                  child: child,
-                                );
-                              },
-                              transitionDuration: duration,
-                            ));
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Icon(Icons.arrow_back_ios, color: Colors.white, size: 37,),
-                  ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation1, animation2) =>
+                          HomePage(),
+                      transitionsBuilder:
+                          (context, animation1, animation2, child) {
+                        return FadeTransition(
+                          opacity: animation1,
+                          child: child,
+                        );
+                      },
+                      transitionDuration: duration,
+                    ));
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                  size: 37,
                 ),
+              ),
+            ),
             backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
+            children: [
+              Text(
                 'Announcements',
                 style: TextStyle(
                     color: Colors.white, fontSize: 56, fontFamily: 'IntroRust'),
               ),
-              ],
-            ),
+            ],
           ),
+        ),
       ),
     );
   }

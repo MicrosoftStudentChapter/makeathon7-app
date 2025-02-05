@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/home_page.dart';
+import 'package:makeathon7/core/pages/homepage/home_page.dart';
 
 void main() {
   runApp(const MyApp());
