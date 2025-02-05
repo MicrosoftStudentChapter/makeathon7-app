@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/home_page.dart';
+import 'package:makeathon7/core/pages/homepage/home_page.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
 
 class TracksWidget extends StatelessWidget {
@@ -11,11 +11,11 @@ class TracksWidget extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('lib/assets/images/background.png'),
-              fit: BoxFit.cover,
-            ),
+          image: DecorationImage(
+            image: AssetImage('lib/assets/images/background.png'),
+            fit: BoxFit.cover,
           ),
+        ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -34,39 +34,55 @@ class TracksWidget extends StatelessWidget {
                   width: 5,
                 ),
                 boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(),
-                  spreadRadius: 4,
-                  blurRadius: 9,
-                  offset: Offset(0, 4), // changes position of shadow
-                ),
+                  BoxShadow(
+                    color: Colors.black.withValues(),
+                    spreadRadius: 4,
+                    blurRadius: 9,
+                    offset: Offset(0, 4), // changes position of shadow
+                  ),
                 ],
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Column(children: [
-                  Row(
-                    children: [
-                      IconButton(onPressed: () {
-                        Navigator.push(context, PageRouteBuilder(
-                            pageBuilder: (context, animation1, animation2) => HomePage(),
-                            transitionsBuilder: (context, animation1, animation2, child) {
-                              return FadeTransition(
-                                opacity: animation1,
-                                child: child,
-                              );
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  PageRouteBuilder(
+                                    pageBuilder:
+                                        (context, animation1, animation2) =>
+                                            HomePage(),
+                                    transitionsBuilder: (context, animation1,
+                                        animation2, child) {
+                                      return FadeTransition(
+                                        opacity: animation1,
+                                        child: child,
+                                      );
+                                    },
+                                    transitionDuration: duration,
+                                  ));
                             },
-                            transitionDuration: duration,
-                          ));
-                      }, icon: Icon(Icons.arrow_back_ios, size: 30, color: AppPallete.whiteColor,)),
-                      Center(child: Text(
-                        'TRACK TITLE',
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 20, fontFamily: 'LemonMilkMedium'),
-                      )),
-                    ],
-                  )
-                ],),
+                            icon: Icon(
+                              Icons.arrow_back_ios,
+                              size: 30,
+                              color: AppPallete.whiteColor,
+                            )),
+                        Center(
+                            child: Text(
+                          'TRACK TITLE',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: 'LemonMilkMedium'),
+                        )),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),
