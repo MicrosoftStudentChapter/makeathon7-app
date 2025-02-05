@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/core/pages/homepage/home_page.dart';
+import 'package:makeathon7/core/pages/navigator.dart';
 
 class Announcements extends StatelessWidget {
   const Announcements({super.key});
@@ -24,7 +24,7 @@ class Announcements extends StatelessWidget {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation1, animation2) =>
-                          HomePage(),
+                          HomePageNavigator(),
                       transitionsBuilder:
                           (context, animation1, animation2, child) {
                         return FadeTransition(
