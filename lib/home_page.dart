@@ -29,22 +29,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(context, PageRouteBuilder(
-                        pageBuilder: (context, animation1, animation2) => CallAMentor(),
-                        transitionsBuilder: (context, animation1, animation2, child) {
-                          return FadeTransition(
-                            opacity: animation1,
-                            child: child,
-                          );
-                        },
-                        transitionDuration: Duration(milliseconds: 1000),
-                      ));
-          },
-          backgroundColor: Colors.transparent,
-          child: Image.asset('lib/assets/images/callButton.png'),
-        ),
+      // floatingActionButton: FloatingActionButton(
+      //     onPressed: () {
+      //       Navigator.push(context, PageRouteBuilder(
+      //                   pageBuilder: (context, animation1, animation2) => CallAMentor(),
+      //                   transitionsBuilder: (context, animation1, animation2, child) {
+      //                     return FadeTransition(
+      //                       opacity: animation1,
+      //                       child: child,
+      //                     );
+      //                   },
+      //                   transitionDuration: Duration(milliseconds: 1000),
+      //                 ));
+      //     },
+      //     backgroundColor: Colors.transparent,
+      //     child: Image.asset('lib/assets/images/callButton.png'),
+      //   ),
       bottomNavigationBar: CurvedNavigationBar(
         color: AppPallete.backgroundColor,
         buttonBackgroundColor: AppPallete.redColor,
