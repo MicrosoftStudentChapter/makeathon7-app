@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:makeathon7/core/pages/homepage/home_page.dart';
+import 'package:makeathon7/core/pages/map/map.dart';
 import 'package:makeathon7/core/pages/profile/profile.dart';
 import 'package:makeathon7/core/pages/timeline/timeline.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
@@ -23,6 +24,7 @@ class _HomePageNavigatorState extends State<HomePageNavigator> {
     const TracksPage(),
     const TimelinePage(),
     const ProfilePage(),
+    const MapPage(),
   ];
 
   @override
