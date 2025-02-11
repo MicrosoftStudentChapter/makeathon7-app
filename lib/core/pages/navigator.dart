@@ -45,6 +45,7 @@ class _HomePageNavigatorState extends State<HomePageNavigator> {
         Icon(Icons.pie_chart, size: 30, color: AppPallete.whiteColor,),
         Icon(Icons.timelapse_outlined, size: 30, color: AppPallete.whiteColor,),
         Icon(Icons.person, size: 30, color: AppPallete.whiteColor,),
+        Icon(Icons.map, size: 30, color: AppPallete.whiteColor,),
       ],),
       body: IndexedStack(
           index: currentPage,

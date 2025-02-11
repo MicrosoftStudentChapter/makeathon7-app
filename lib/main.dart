@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/core/pages/navigator.dart';
+import 'package:makeathon7/core/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Makeathon7',
       debugShowCheckedModeBanner: false,
-      home: const HomePageNavigator(),
+      home: const LoginPage(),
     );
   }
 }
