@@ -36,7 +36,7 @@ class ProfilePage extends StatelessWidget {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Icon(Icons.notifications_active_sharp, color: Colors.white, size: 37,),
+                  child: Icon(Icons.notifications_active_sharp, color: Colors.white, size: MediaQuery.of(context).size.width / 11,),
                   ),
                 ),
             ],

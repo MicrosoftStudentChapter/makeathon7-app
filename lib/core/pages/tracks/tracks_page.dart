@@ -38,7 +38,7 @@ class TracksPage extends StatelessWidget {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Icon(Icons.notifications_active_sharp, color: Colors.white, size: 37,),
+                  child: Icon(Icons.notifications_active_sharp, color: Colors.white, size: MediaQuery.of(context).size.width / 11,),
                   ),
                 ),
             ],
@@ -102,7 +102,7 @@ class TracksPage extends StatelessWidget {
                                 fontFamily: 'LemonMilkMedium')),
                         icon: Icon(
                           Icons.navigation,
-                          size: 25,
+                          size: MediaQuery.of(context).size.width / 17,
                           color: AppPallete.whiteColor,
                         ),
                       ),
@@ -129,7 +129,7 @@ class TracksPage extends StatelessWidget {
                                 fontFamily: 'LemonMilkMedium')),
                         icon: Icon(
                           Icons.search,
-                          size: 25,
+                          size: MediaQuery.of(context).size.width / 17,
                           color: AppPallete.whiteColor,
                         ),
                       ),
@@ -156,7 +156,7 @@ class TracksPage extends StatelessWidget {
                                 fontFamily: 'LemonMilkMedium')),
                         icon: Icon(
                           Icons.close,
-                          size: 25,
+                          size: MediaQuery.of(context).size.width / 17,
                           color: AppPallete.whiteColor,
                         ),
                       ),
@@ -183,7 +183,7 @@ class TracksPage extends StatelessWidget {
                                 fontFamily: 'LemonMilkMedium')),
                         icon: Icon(
                           Icons.timer,
-                          size: 25,
+                          size: MediaQuery.of(context).size.width / 17,
                           color: AppPallete.whiteColor,
                         ),
                       ),

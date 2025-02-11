@@ -68,7 +68,7 @@ class TracksWidget extends StatelessWidget {
                             },
                             icon: Icon(
                               Icons.arrow_back_ios,
-                              size: 30,
+                              size: MediaQuery.of(context).size.width / 15,
                               color: AppPallete.whiteColor,
                             )),
                         Center(

@@ -40,7 +40,7 @@ class Announcements extends StatelessWidget {
                 child: Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
-                  size: 37,
+                  size: MediaQuery.of(context).size.width / 11,
                 ),
               ),
             ),

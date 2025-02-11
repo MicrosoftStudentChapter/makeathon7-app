@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:makeathon7/core/pages/announcements/announcements.dart';
+import 'package:makeathon7/theme/app_pallete.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -44,6 +46,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
+    var duration = Duration(milliseconds: 600);
     return SafeArea(
       child: Container(
          decoration: BoxDecoration(
@@ -53,84 +56,33 @@ class _HomePageState extends State<HomePage>
             ),
           ),
         child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Colors.transparent,
+            actions: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, PageRouteBuilder(
+                              pageBuilder: (context, animation1, animation2) => Announcements(),
+                              transitionsBuilder: (context, animation1, animation2, child) {
+                                return FadeTransition(
+                                  opacity: animation1,
+                                  child: child,
+                                );
+                              },
+                              transitionDuration: duration,
+                            ));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Icon(Icons.notifications_active_sharp, color: Colors.white, size: MediaQuery.of(context).size.width / 11,),
+                  ),
+                ),
+            ],
+          ),
           backgroundColor: Colors.transparent,
           body: Stack(
             children: [
-              // Background with playing card images
-              Positioned.fill(
-                child: Opacity(
-                  opacity: 0.5,
-                  child: Stack(
-                    children: [
-                      // Positioned(
-                      //   top: -20,
-                      //   left: -20,
-                      //   child: Transform.rotate(
-                      //     angle: 0.5, // approximately 28.6 degrees
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   top: 200,
-                      //   left: -30, // more out of frame from the left edge
-                      //   child: Transform.rotate(
-                      //     angle: -0.5, // approximately -28.6 degrees
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   bottom: -20,
-                      //   right: -20,
-                      //   child: Transform.rotate(
-                      //     angle:
-                      //         2.14, // approximately 122.6 degrees (180 degrees relative to -1.0)
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   bottom: 10,
-                      //   left: -10,
-                      //   child: Transform.rotate(
-                      //     angle: 1.0, // approximately 57.3 degrees
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   bottom: 60,
-                      //   left: 10,
-                      //   child: Transform.rotate(
-                      //     angle: -1.0, // approximately -57.3 degrees
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   top: 10,
-                      //   right: -10,
-                      //   child: Transform.rotate(
-                      //     angle: 0.8, // approximately 45.8 degrees
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   top: 60,
-                      //   right: 10,
-                      //   child: Transform.rotate(
-                      //     angle:
-                      //         2.34, // approximately 134.2 degrees (180 degrees relative to -0.8)
-                      //     child: Image.asset('assets/images/mini_playing_card.png',
-                      //         width: 75, height: 105), // scaled by a factor of 1.5
-                      //   ),
-                      // ),
-                    ],
-                  ),
-                ),
-              ),
               // Foreground with text
               Positioned(
                 top: 100, // moved up by 50 pixels
@@ -150,7 +102,7 @@ class _HomePageState extends State<HomePage>
               // Additional text in the center
               Positioned(
                 top: MediaQuery.of(context).size.height / 2 -
-                    130, // moved up by 30 pixels
+                    140, // moved up by 30 pixels
                 left: 0,
                 right: 0,
                 child: Center(
@@ -165,7 +117,11 @@ class _HomePageState extends State<HomePage>
                 ),
               ),
               // Image in the dead center
-              Center(
+              Positioned(
+                top: MediaQuery.of(context).size.height / 2 -
+                    70, // moved up by 30 pixels
+                left: 0,
+                right: 0,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Image.asset('lib/assets/images/slot_machine.png',
@@ -174,12 +130,12 @@ class _HomePageState extends State<HomePage>
               ),
               // Floating action button
               Positioned(
-                bottom: 150,
+                bottom: 50,
                 right: 30, // moved 30 pixels to the right
                 child: SlideTransition(
                   position: _animation,
                   child: Transform.scale(
-                    scale: 1.5, // scaled by a factor of 1.5
+                    scale: 1.2, // scaled by a factor of 1.2
                     child: FloatingActionButton(
                       onPressed: _toggleRectangle,
                       backgroundColor: Colors.transparent,
@@ -191,25 +147,30 @@ class _HomePageState extends State<HomePage>
               // Rounded rectangle without animation
               if (_showRectangle)
                 Positioned(
-                  bottom: 210, // 30 pixels above the floating button
+                  bottom: 130, // 30 pixels above the floating button
                   left: 10,
                   right: 10,
                   child: Container(
                     width: MediaQuery.of(context).size.width - 20,
                     height: (MediaQuery.of(context).size.width - 20) / 2,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppPallete.redColor,
                       borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: AppPallete.greenColor,
+                        width: 5,
+                      ),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // Add your children widgets here
                         Text(
-                          'Hello, World!',
+                          'Call A Mentor',
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.black,
+                            color: Colors.white,
+                            fontFamily: 'LemonMilkMedium',
                           ),
                         ),
                       ],
