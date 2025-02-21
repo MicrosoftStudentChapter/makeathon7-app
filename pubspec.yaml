@@ -67,6 +67,7 @@ flutter:
     - lib/assets/images/call_token.png
     - lib/assets/images/slot_machine.png
     - lib/assets/images/mini_playing_card.png
+    - lib/assets/images/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -86,6 +87,11 @@ flutter:
     - family: LemonMilkMedium 
       fonts: 
         - asset: lib/assets/fonts/lemonMilk.otf
+    - family: Font
+      fonts: 
+        - asset: lib/assets/fonts/league.ttf
+
+        
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
