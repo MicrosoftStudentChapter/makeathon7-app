@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage>
             children: [
               // Foreground with text
               Positioned(
-                top: 100, // moved up by 50 pixels
+                top: 150, // moved up by 50 pixels
                 left: 0,
                 right: 0,
                 child: Center(
