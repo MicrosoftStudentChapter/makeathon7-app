@@ -89,7 +89,7 @@ class TimelinePage extends StatelessWidget {
                                 children: [
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width *
-                                        0.19,
+                                        0.17,
                                   ),
                                   Text(
                                     'Event ${index + 1}',
@@ -105,7 +105,7 @@ class TimelinePage extends StatelessWidget {
                                 children: [
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width *
-                                        0.21,
+                                        0.195,
                                   ),
                                   Text(
                                     '22/2/2025',
@@ -124,8 +124,8 @@ class TimelinePage extends StatelessWidget {
                                 'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: AppPallete.whiteOpac,
-                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontSize: 17.5,
                                     fontWeight: FontWeight.w600,
                                     fontFamily: 'LeagueSpartan'),
                               ),

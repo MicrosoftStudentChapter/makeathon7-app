@@ -23,8 +23,8 @@ class _HomePageNavigatorState extends State<HomePageNavigator> {
     const HomePage(),
     const TracksPage(),
     const TimelinePage(),
-    const ProfilePage(),
     const MapPage(),
+    const ProfilePage(),
   ];
 
   @override
@@ -44,8 +44,8 @@ class _HomePageNavigatorState extends State<HomePageNavigator> {
         Icon(Icons.home, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
         Icon(Icons.pie_chart, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
         Icon(Icons.timelapse_outlined, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
-        Icon(Icons.person, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
         Icon(Icons.map, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
+        Icon(Icons.person, size: MediaQuery.of(context).size.width / 13, color: AppPallete.whiteColor,),
       ],),
       body: IndexedStack(
           index: currentPage,
