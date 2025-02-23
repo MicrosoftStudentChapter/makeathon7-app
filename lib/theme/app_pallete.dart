@@ -11,6 +11,7 @@ class AppPallete {
   static const Color blueColor = Color.fromRGBO(0, 31, 63, 1);
   static const Color gold = Color.fromRGBO(224, 196, 88, 1);
   static const Color goldOpac = Color.fromRGBO(224, 196, 88, 0.60);
+  static const Color whiteOpac = Color.fromRGBO(255, 255, 255, 0.48);
   static const Color whiteColor = Colors.white;
   static const Color greyColor = Colors.grey;
   static const Color errorColor = Colors.redAccent;
