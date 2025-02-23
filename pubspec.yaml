@@ -87,7 +87,7 @@ flutter:
     - family: LemonMilkMedium 
       fonts: 
         - asset: lib/assets/fonts/lemonMilk.otf
-    - family: Font
+    - family: LeagueSpartan
       fonts: 
         - asset: lib/assets/fonts/league.ttf
 

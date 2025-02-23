@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                       left: 20.0, top: 0.0),
                   child: Image.asset(
                     'lib/assets/images/logo.png', // Path to your logo image
-                    height: 1000, // Adjust the height as needed
+                    // height: 1000, // Adjust the height as needed
                   ),
                 ),
               ),
@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
                             hintText: 'Email/Username',
                             hintStyle: TextStyle(
                               color: Colors.white.withAlpha(158),
-                              fontFamily: 'Font',
+                              fontFamily: 'LeagueSpartan',
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -77,7 +77,7 @@ class LoginPage extends StatelessWidget {
                             hintText: 'Password',
                             hintStyle: TextStyle(
                               color: Colors.white.withAlpha(158),
-                              fontFamily: 'Font',
+                              fontFamily: 'LeagueSpartan',
                              
                             ),
                             enabledBorder: OutlineInputBorder(
@@ -133,7 +133,7 @@ class LoginPage extends StatelessWidget {
                             'Login',
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'Font',
+                              fontFamily: 'IntroRust',
                               fontSize: 20.0,
                               fontWeight: FontWeight.w900,
                             ),
@@ -143,13 +143,26 @@ class LoginPage extends StatelessWidget {
                       SizedBox(height: 20),
                       TextButton(
                         onPressed: () {
-                          // Add your navigation logic here
+                          Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation1, animation2) =>
+                            HomePageNavigator(),
+                        transitionsBuilder:
+                            (context, animation1, animation2, child) {
+                          return FadeTransition(
+                            opacity: animation1,
+                            child: child,
+                          );
+                        },
+                        transitionDuration: duration,
+                      ));
                         },
                         child: Text(
-                          "don't have an account?",
+                          "Don't have an account?",
                           style: TextStyle(
                             color: Colors.white,
-                            fontFamily: 'Font',
+                            fontFamily: 'LeagueSpartan',
                             fontSize: 17.0,
                           ),
                         ),
