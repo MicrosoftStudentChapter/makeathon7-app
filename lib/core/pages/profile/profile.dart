@@ -44,11 +44,83 @@ class ProfilePage extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                'Profile',
-                style: TextStyle(
-                    color: Colors.white, fontSize: 56, fontFamily: 'IntroRust'),
-              ),
+                //Profile Title
+               Padding(
+  padding: const EdgeInsets.only(bottom: 100), // Adjust this value to move it upwards
+  child: Center(
+    child: Image.asset(
+      'assets/Profile (1).png', // Use your saved image
+      width: 150, // Adjust size as needed
+    ),
+  ),
+),
+
+SizedBox(height: 0),
+
+          // Profile Image (Properly Aligned)
+          Align(
+  alignment: Alignment(-0.7, 0.7), // Move slightly up
+  child: CircleAvatar(
+    radius: 39,
+    backgroundImage: AssetImage('assets/Group 8 (1).png'),
+  ),
+),
+
+
+              SizedBox(height: 40),
+
+  // Profile Details
+              Padding(
+                      padding: const EdgeInsets.only(right: 60), // Adjust left padding as needed
+                      child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start, // Align text to the left
+             children: [
+              Text("Name:", style: profileLabelStyle(fontSize: 14)),
+              SizedBox(height: 4),
+              Text("Aarav Dudeja", style: profileValueStyle(fontSize: 18)),
+              
+
+      Text("Email:", style: profileLabelStyle(fontSize: 14)),
+      SizedBox(height: 4),
+      Text("aarav.dudeja@gmail.com", style: profileValueStyle(fontSize: 18)),
+
+      Text("Phone:", style: profileLabelStyle(fontSize: 14)),
+      SizedBox(height: 4),
+      Text("894114141512", style: profileValueStyle(fontSize: 18)),
+
+      SizedBox(height: 60),
+
+  // Team Info
+      Text("TEAM NAME:", style: profileLabelStyle()),
+      Text("MEOW MEOW", style: profileValueStyle()),
+      Text("#89u1430", style: profileValueStyle()),
+      SizedBox(height: 20),
+      // Team Members
+      Text("Aarav Dudeja ★", style: profileValueStyle()),
+      Text("Kool Kids", style: profileValueStyle()),
+      Text("Someone else", style: profileValueStyle()),
+      Text("AJnjnjndaf", style: profileValueStyle()),
+    ],
+  ),
+),
+             // Profile Text Styles
+TextStyle profileLabelStyle({double fontSize = 14}) {
+  return TextStyle(
+    fontFamily: 'roboto', // Change to 'sans-serif' or 'monospace' if needed
+    fontSize: fontSize,
+    fontWeight: FontWeight.bold,
+    color: Colors.grey[700],
+  );
+}
+  TextStyle profileValueStyle({double fontSize = 18}) {
+  return TextStyle(
+    fontFamily: 'roboto', // Change font family as desired
+    fontSize: fontSize,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+ );
+  }
+
               ],
             ),
           ),
