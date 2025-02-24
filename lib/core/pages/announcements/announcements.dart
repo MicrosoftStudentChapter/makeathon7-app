@@ -69,6 +69,7 @@ class Announcements extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.48,
                   child: Expanded(
+                    flex: 1,
                   child: ListView.builder(
                     itemCount: 6,
                     itemBuilder: (context, index) {

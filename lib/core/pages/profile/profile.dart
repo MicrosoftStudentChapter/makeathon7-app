@@ -50,32 +50,34 @@ class ProfilePage extends StatelessWidget {
             ],
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //Profile Title
               Padding(
                 padding: const EdgeInsets.only(
-                    bottom: 100), // Adjust this value to move it upwards
-                child: Center(
-                  child: Image.asset(
-                    'assets/Profile (1).png', // Use your saved image
-                    width: 150, // Adjust size as needed
+                    top: 25,
+                    bottom: 15), // Adjust this value to move it upwards
+                child: Text(
+                  "Profile",
+                  style: TextStyle(
+                    fontFamily: 'IntroRust',
+                    fontSize: 56,
+                    
+                    color: Colors.white,
                   ),
                 ),
               ),
 
-              SizedBox(height: 0),
 
               // Profile Image (Properly Aligned)
               Align(
                 alignment: Alignment(-0.7, 0.7), // Move slightly up
                 child: CircleAvatar(
                   radius: 39,
-                  backgroundImage: AssetImage('assets/Group 8 (1).png'),
+                  backgroundImage: AssetImage('lib/assets/images/ProfileIcon.png'),
                 ),
               ),
 
-              SizedBox(height: 40),
+              SizedBox(height: 30),
 
               // Profile Details
               Padding(
@@ -100,7 +102,7 @@ class ProfilePage extends StatelessWidget {
                     Text("894114141512",
                         style: profileValueStyle(fontSize: 18)),
 
-                    SizedBox(height: 60),
+                    SizedBox(height: 40),
 
                     // Team Info
                     Text("TEAM NAME:", style: profileLabelStyle()),

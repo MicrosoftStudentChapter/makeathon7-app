@@ -77,6 +77,7 @@ class TimelinePage extends StatelessWidget {
                 width: 295,
                 height: 370,
                 child: Expanded(
+                  flex: 1,
                   child: ListView.builder(
                     itemCount: 6,
                     itemBuilder: (context, index) {
