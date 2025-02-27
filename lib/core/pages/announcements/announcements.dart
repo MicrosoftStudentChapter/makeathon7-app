@@ -54,75 +54,85 @@ class Announcements extends StatelessWidget {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.1,
+                    width: MediaQuery.of(context).size.width * 0.122,
                   ),
-                Text(
-                  'Announcements',
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 32, fontFamily: 'IntroRust'),
-                ),
+                  Text(
+                    'Announcements',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontFamily: 'IntroRust'),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.122,
+                  ),
                 ],
               ),
               SizedBox(
-                height: 80,
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
-                SizedBox(
+              Expanded(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.48,
-                  child: Expanded(
-                    flex: 1,
                   child: ListView.builder(
                     itemCount: 6,
                     itemBuilder: (context, index) {
-                    return SingleChildScrollView(
-                    child: Column(
-                      children: [
-                      Row(
-                        children: [
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.1,
+                      return SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                ),
+                                Text(
+                                  'Announcement ${index + 1}',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'LeagueSpartan'),
+                                ),
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.25,
+                                ),
+                                Text(
+                                  '20:48',
+                                  style: TextStyle(
+                                      color: AppPallete.redColor,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'LeagueSpartan'),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 37),
+                              child: Text(
+                                'Checkpoint will begin at 21:00. Please be seated at your seats till then. Meow meow meow Meow meow meow Meow meow meow',
+                                style: TextStyle(
+                                    color: AppPallete.whiteOpac,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'LeagueSpartan'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.03,
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Announcement ${index + 1}',
-                          style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 23,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'LeagueSpartan'),
-                        ),
-                        SizedBox(
-                          width: 92,
-                        ),
-                        Text(
-                          '20:48',
-                          style: TextStyle(
-                          color: AppPallete.redColor,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'LeagueSpartan'),
-                        ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 37),
-                        child: Text(
-                        'Checkpoint will begin at 21:00. Please be seated at your seats till then. Meow meow meow Meow meow meow Meow meow meow',
-                        style: TextStyle(
-                          color: AppPallete.whiteOpac,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'LeagueSpartan'),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      ],
-                    ),
-                    );
+                      );
                     },
                   ),
-                  ),
                 ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.22,
+              ),
             ],
           ),
         ),

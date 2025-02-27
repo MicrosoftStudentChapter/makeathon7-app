@@ -49,31 +49,30 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          body: Column(
-            children: [
+            body: SingleChildScrollView(
+            child: Column(
+              children: [
               //Profile Title
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 25,
-                    bottom: 15), // Adjust this value to move it upwards
+                  top: 25,
+                  bottom: 15), // Adjust this value to move it upwards
                 child: Text(
-                  "Profile",
-                  style: TextStyle(
-                    fontFamily: 'IntroRust',
-                    fontSize: 56,
-                    
-                    color: Colors.white,
-                  ),
+                "Profile",
+                style: TextStyle(
+                  fontFamily: 'IntroRust',
+                  fontSize: 56,
+                  color: Colors.white,
+                ),
                 ),
               ),
-
 
               // Profile Image (Properly Aligned)
               Align(
                 alignment: Alignment(-0.7, 0.7), // Move slightly up
                 child: CircleAvatar(
-                  radius: 39,
-                  backgroundImage: AssetImage('lib/assets/images/ProfileIcon.png'),
+                radius: 39,
+                backgroundImage: AssetImage('lib/assets/images/ProfileIcon.png'),
                 ),
               ),
 
@@ -82,45 +81,46 @@ class ProfilePage extends StatelessWidget {
               // Profile Details
               Padding(
                 padding: const EdgeInsets.only(
-                    right: 60), // Adjust left padding as needed
+                  right: 60), // Adjust left padding as needed
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start, // Align text to the left
-                  children: [
-                    Text("Name:", style: profileLabelStyle(fontSize: 14)),
-                    SizedBox(height: 4),
-                    Text("Aarav Dudeja",
-                        style: profileValueStyle(fontSize: 18)),
+                crossAxisAlignment:
+                  CrossAxisAlignment.start, // Align text to the left
+                children: [
+                  Text("Name:", style: profileLabelStyle(fontSize: 14)),
+                  SizedBox(height: 4),
+                  Text("Aarav Dudeja",
+                    style: profileValueStyle(fontSize: 18)),
 
-                    Text("Email:", style: profileLabelStyle(fontSize: 14)),
-                    SizedBox(height: 4),
-                    Text("aarav.dudeja@gmail.com",
-                        style: profileValueStyle(fontSize: 18)),
+                  Text("Email:", style: profileLabelStyle(fontSize: 14)),
+                  SizedBox(height: 4),
+                  Text("aarav.dudeja@gmail.com",
+                    style: profileValueStyle(fontSize: 18)),
 
-                    Text("Phone:", style: profileLabelStyle(fontSize: 14)),
-                    SizedBox(height: 4),
-                    Text("894114141512",
-                        style: profileValueStyle(fontSize: 18)),
+                  Text("Phone:", style: profileLabelStyle(fontSize: 14)),
+                  SizedBox(height: 4),
+                  Text("894114141512",
+                    style: profileValueStyle(fontSize: 18)),
 
-                    SizedBox(height: 40),
+                  SizedBox(height: 40),
 
-                    // Team Info
-                    Text("TEAM NAME:", style: profileLabelStyle()),
-                    Text("MEOW MEOW", style: profileValueStyle()),
-                    Text("#89u1430", style: profileValueStyle()),
-                    SizedBox(height: 20),
-                    // Team Members
-                    Text("Aarav Dudeja ★", style: profileValueStyle()),
-                    Text("Kool Kids", style: profileValueStyle()),
-                    Text("Someone else", style: profileValueStyle()),
-                    Text("AJnjnjndaf", style: profileValueStyle()),
-                  ],
+                  // Team Info
+                  Text("TEAM NAME:", style: profileLabelStyle()),
+                  Text("MEOW MEOW", style: profileValueStyle()),
+                  Text("#89u1430", style: profileValueStyle()),
+                  SizedBox(height: 20),
+                  // Team Members
+                  Text("Aarav Dudeja ★", style: profileValueStyle()),
+                  Text("Kool Kids", style: profileValueStyle()),
+                  Text("Someone else", style: profileValueStyle()),
+                  Text("AJnjnjndaf", style: profileValueStyle()),
+                ],
                 ),
               ),
-            ],
+              ],
+            ),
+            ),
           ),
         ),
-      ),
     );
   }
 }

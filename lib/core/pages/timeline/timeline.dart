@@ -55,7 +55,7 @@ class TimelinePage extends StatelessWidget {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.16,
+                    width: MediaQuery.of(context).size.width * 0.15,
                   ),
                   Text(
                     'Timeline',
@@ -64,20 +64,23 @@ class TimelinePage extends StatelessWidget {
                         fontSize: 56,
                         fontFamily: 'IntroRust'),
                   ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                  ),
                 ],
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: AppPallete.timelineBg,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                width: 295,
-                height: 370,
-                child: Expanded(
-                  flex: 1,
+              Expanded(
+                flex: 1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppPallete.timelineBg,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  width: 295,
+                  height: 370,
                   child: ListView.builder(
                     itemCount: 6,
                     itemBuilder: (context, index) {
@@ -140,6 +143,9 @@ class TimelinePage extends StatelessWidget {
                     },
                   ),
                 ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.21,
               ),
             ],
           ),

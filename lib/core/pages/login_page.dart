@@ -1,8 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:makeathon7/core/pages/navigator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  Future<void> signIn() async {
+    try {
+      final UserCredential user = await _auth.signInWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      if (user.user != null) {
+        Navigator.push(
+          // ignore: use_build_context_synchronously
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation1, animation2) =>
+                HomePageNavigator(),
+            transitionsBuilder: (context, animation1, animation2, child) {
+              return FadeTransition(
+                opacity: animation1,
+                child: child,
+              );
+            },
+            transitionDuration: Duration(milliseconds: 600),
+          ),
+        );
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +80,7 @@ class LoginPage extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: TextField(
+                          controller: _emailController,
                           decoration: InputDecoration(
                             hintText: 'Email/Username',
                             hintStyle: TextStyle(
@@ -73,6 +112,7 @@ class LoginPage extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: TextField(
+                          controller: _passwordController,
                           decoration: InputDecoration(
                             hintText: 'Password',
                             hintStyle: TextStyle(
@@ -103,22 +143,9 @@ class LoginPage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width *
                             0.5, // Adjust the width of the login button
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation1, animation2) =>
-                            HomePageNavigator(),
-                        transitionsBuilder:
-                            (context, animation1, animation2, child) {
-                          return FadeTransition(
-                            opacity: animation1,
-                            child: child,
-                          );
-                        },
-                        transitionDuration: duration,
-                      ));
-                          },
+                      onPressed: () {
+                        signIn();
+                      },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 154, 7,
                                 0), // Set the background color to red
