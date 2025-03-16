@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:makeathon7/core/global_variables.dart';
+import 'package:makeathon7/core/pages/announcements/announce_card.dart';
 import 'package:makeathon7/core/pages/navigator.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
 
@@ -59,69 +61,26 @@ class Announcements extends StatelessWidget {
                       fontFamily: 'IntroRust'),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.045,
                 ),
                 Expanded(
                   child: SizedBox(
                     height: MediaQuery.of(context).size.height * 0.48,
                     child: ListView.builder(
-                      itemCount: 6,
+                      itemCount: announcements.length,
                       itemBuilder: (context, index) {
-                        return SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.1,
-                                  ),
-                                  Text(
-                                    'Announcement ${index + 1}',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 23,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: 'LeagueSpartan'),
-                                  ),
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.25,
-                                  ),
-                                  Text(
-                                    '20:48',
-                                    style: TextStyle(
-                                        color: AppPallete.redColor,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: 'LeagueSpartan'),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 37),
-                                child: Text(
-                                  'Checkpoint will begin at 21:00. Please be seated at your seats till then. Meow meow meow Meow meow meow Meow meow meow',
-                                  style: TextStyle(
-                                      color: AppPallete.whiteOpac,
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'LeagueSpartan'),
-                                ),
-                              ),
-                              SizedBox(
-                                height: MediaQuery.of(context).size.height * 0.03,
-                              ),
-                            ],
-                          ),
+                        final announce = announcements[index];
+                        return AnnounceCard(
+                          title: announce['title'] as String,
+                          time: announce['time'] as String,
+                          description: announce['description'] as String,
                         );
                       },
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.22,
+                  height: MediaQuery.of(context).size.height * 0.23,
                 ),
               ],
             ),
