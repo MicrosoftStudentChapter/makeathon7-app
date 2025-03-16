@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '23981252288',
     projectId: 'makeathon7-app',
     storageBucket: 'makeathon7-app.firebasestorage.app',
-    iosBundleId: 'com.example.makeathon7',
+    iosBundleId: 'com.mlsc.makeathon7',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '23981252288',
     projectId: 'makeathon7-app',
     storageBucket: 'makeathon7-app.firebasestorage.app',
-    iosBundleId: 'com.example.makeathon7',
+    iosBundleId: 'com.mlsc.makeathon7',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
