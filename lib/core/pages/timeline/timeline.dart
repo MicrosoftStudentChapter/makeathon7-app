@@ -79,7 +79,11 @@ class TimelinePage extends StatelessWidget {
                           date: timelineEvent['date'] as String,
                           description: timelineEvent['description'] as String,
                           ),
-                          // if (index < timelineEvents.length - 1)
+                          if (index < timelineEvents.length - 1)
+                            Icon(
+                              Icons.arrow_downward,
+                              color: Colors.white,
+                            ),
                           //   IconButton(
                           //   icon: Icon(
                           //     Icons.arrow_downward,
@@ -100,7 +104,7 @@ class TimelinePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.21,
+                  height: MediaQuery.of(context).size.height * 0.18,
                 ),
               ],
             ),
