@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 final timelineEvents = [
   {
     'id': 0,
@@ -85,5 +87,34 @@ final announcements = [
     'time': '20:48',
     'description':
         'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum'
+  },
+];
+
+final tracks = [
+  {
+    'id': 0,
+    'icon': Icon(Icons.navigation),
+    'title': 'Track 1',
+    'description': 
+              'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
+  },
+  {
+    'id': 1,
+    'icon': Icon(Icons.navigation),
+    'title': 'Track 2',
+    'description': 
+              'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
+  },
+  {
+    'id': 2,
+    'title': 'Track 3',
+    'description': 
+              'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
+  },
+  {
+    'id': 3,
+    'title': 'Track 4',
+    'description': 
+              'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
   },
 ];
