@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:makeathon7/core/global_variables.dart';
 import 'package:makeathon7/core/pages/announcements/announce_card.dart';
 import 'package:makeathon7/core/pages/navigator.dart';
-import 'package:makeathon7/theme/app_pallete.dart';
 
 class Announcements extends StatelessWidget {
   const Announcements({super.key});

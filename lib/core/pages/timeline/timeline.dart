@@ -1,7 +1,5 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:makeathon7/core/pages/announcements/announcements.dart';
-import 'package:makeathon7/theme/app_pallete.dart';
 import 'package:makeathon7/core/global_variables.dart';
 import 'package:makeathon7/core/pages/timeline/timeline_card.dart';
 

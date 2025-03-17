@@ -93,26 +93,28 @@ final announcements = [
 final tracks = [
   {
     'id': 0,
-    'icon': Icon(Icons.navigation),
+    'icon': Icon(Icons.navigation, color: Colors.white, size: 24.0,),
     'title': 'Track 1',
     'description': 
               'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
   },
   {
     'id': 1,
-    'icon': Icon(Icons.navigation),
+    'icon': Icon(Icons.search, color: Colors.white, size: 24.0,),
     'title': 'Track 2',
     'description': 
               'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
   },
   {
     'id': 2,
+    'icon': Icon(Icons.close, color: Colors.white, size: 24.0,),
     'title': 'Track 3',
     'description': 
               'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
   },
   {
     'id': 3,
+    'icon': Icon(Icons.timer, color: Colors.white, size: 24.0,),
     'title': 'Track 4',
     'description': 
               'Meow ok how lorem ipsum vMeow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum Meow ok how lorem ipsum',
