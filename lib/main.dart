@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:makeathon7/core/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:makeathon7/theme/app_pallete.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Makeathon7',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        scrollbarTheme: ScrollbarThemeData().copyWith(
+          thumbColor: WidgetStatePropertyAll(AppPallete.whiteOpac),
+        ),
+      ),
       home: LoginPage(),
     );
   }

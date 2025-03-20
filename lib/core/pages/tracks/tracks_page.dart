@@ -72,21 +72,17 @@ class TracksPage extends StatelessWidget {
                   height: 280,
                   width: 294,
                   decoration: BoxDecoration(
-                    color: AppPallete.redColorOpac,
-                    border: Border.all(
-                      color: AppPallete.greenColor,
-                      width: 7,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(),
-                        spreadRadius: 4,
-                        blurRadius: 9,
-                        offset: Offset(0, 4), // changes position of shadow
-                      ),
-                    ],
+                color: AppPallete.timelineBg,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(),
+                    spreadRadius: 4,
+                    blurRadius: 9,
+                    offset: Offset(0, 4), // changes position of shadow
                   ),
+                ],
+              ),
                   child: Column(
                     children: [
                       SizedBox(

@@ -9,6 +9,7 @@ class TimelinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var duration = Duration(milliseconds: 1000);
+    ScrollController controller = ScrollController();
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
@@ -65,42 +66,37 @@ class TimelinePage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
                 Expanded(
-                  flex: 1,
-                  child: ListView.builder(
-                    itemCount: timelineEvents.length,
-                    itemBuilder: (context, index) {
+                  // flex: 1,
+                    child: Scrollbar(
+                    thumbVisibility: true,
+                    thickness: 10,
+                    radius: Radius.circular(10),
+                    scrollbarOrientation: ScrollbarOrientation.right,
+                    controller: controller,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      controller: controller,
+                      itemCount: timelineEvents.length,
+                      itemBuilder: (context, index) {
                       final timelineEvent = timelineEvents[index];
-                        return Column(
+                      return Column(
                         children: [
-                          EventCard(
+                        EventCard(
                           title: timelineEvent['title'] as String,
                           date: timelineEvent['date'] as String,
                           description: timelineEvent['description'] as String,
+                        ),
+                        if (index < timelineEvents.length - 1)
+                          Icon(
+                          Icons.arrow_downward,
+                          color: Colors.white,
                           ),
-                          if (index < timelineEvents.length - 1)
-                            Icon(
-                              Icons.arrow_downward,
-                              color: Colors.white,
-                            ),
-                          //   IconButton(
-                          //   icon: Icon(
-                          //     Icons.arrow_downward,
-                          //     color: Colors.white,
-                          //   ),
-                          //   onPressed: () {
-                          //     Scrollable.ensureVisible(
-                          //     context,
-                          //     duration: Duration(milliseconds: 2000),
-                          //     alignment: 0.2,
-                          //     curve: Curves.easeInOut,
-                          //     );
-                          //   },
-                          //   ),
                         ],
-                        );
-                    },
+                      );
+                      },
+                    ),
+                    ),
                   ),
-                ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.18,
                 ),

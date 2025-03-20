@@ -11,7 +11,7 @@ class AppPallete {
   static const Color blueColor = Color.fromRGBO(0, 31, 63, 1);
   static const Color gold = Color.fromRGBO(224, 196, 88, 1);
   static const Color goldOpac = Color.fromRGBO(224, 196, 88, 0.60);
-  static const Color whiteOpac = Color.fromRGBO(255, 255, 255, 0.48);
+  static const Color whiteOpac = Color.fromRGBO(255, 255, 255, 0.85);
   static const Color timelineBg = Color.fromRGBO(35, 34, 34, 1);
   static const Color timelineGold = Color.fromRGBO(255, 218, 111, 1);
   static const Color whiteColor = Colors.white;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Timeline events
 final timelineEvents = [
   {
     'id': 0,
@@ -45,6 +46,7 @@ final timelineEvents = [
   },
 ];
 
+// Announcements
 final announcements = [
   {
     'id': 0,
@@ -90,6 +92,7 @@ final announcements = [
   },
 ];
 
+// Tracks Information
 final tracks = [
   {
     'id': 0,

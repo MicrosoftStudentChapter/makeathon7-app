@@ -9,6 +9,7 @@ class Announcements extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var duration = Duration(milliseconds: 600);
+    ScrollController controller = ScrollController();
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
@@ -65,16 +66,25 @@ class Announcements extends StatelessWidget {
                 Expanded(
                   child: SizedBox(
                     height: MediaQuery.of(context).size.height * 0.48,
-                    child: ListView.builder(
-                      itemCount: announcements.length,
-                      itemBuilder: (context, index) {
-                        final announce = announcements[index];
-                        return AnnounceCard(
-                          title: announce['title'] as String,
-                          time: announce['time'] as String,
-                          description: announce['description'] as String,
-                        );
-                      },
+                    child: Scrollbar(
+                      thumbVisibility: true,
+                      thickness: 10,
+                      radius: Radius.circular(10),
+                      scrollbarOrientation: ScrollbarOrientation.right,
+                      controller: controller,
+                      child: ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        controller: controller,
+                        itemCount: announcements.length,
+                        itemBuilder: (context, index) {
+                          final announce = announcements[index];
+                          return AnnounceCard(
+                            title: announce['title'] as String,
+                            time: announce['time'] as String,
+                            description: announce['description'] as String,
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
