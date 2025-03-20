@@ -13,8 +13,21 @@ class TracksPageDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 23, vertical: 23),
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: AppPallete.timelineBg,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(),
+              spreadRadius: 4,
+              blurRadius: 9,
+              offset: Offset(0, 4), // changes position of shadow
+            ),
+          ],
+        ),
         child: Column(
           children: [
             Center(
@@ -33,6 +46,7 @@ class TracksPageDisplay extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
+                  fontWeight: FontWeight.w600,
                   fontFamily: 'LeagueSpartan'),
             ),
           ],

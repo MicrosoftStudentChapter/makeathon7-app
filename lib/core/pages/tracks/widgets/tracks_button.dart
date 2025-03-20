@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/core/pages/tracks/tracks_widget.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_popup.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
 
 class TracksButton extends StatelessWidget {

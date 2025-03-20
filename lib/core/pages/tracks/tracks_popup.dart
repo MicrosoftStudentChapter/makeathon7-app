@@ -49,41 +49,21 @@ class TracksWidget extends StatelessWidget {
                         )
                         ),
           ),
-          body: Center(
-            child: Container(
-              width: 309,
-              height: 625,
-              decoration: BoxDecoration(
-                color: AppPallete.timelineBg,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(),
-                    spreadRadius: 4,
-                    blurRadius: 9,
-                    offset: Offset(0, 4), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: Center(
-                child: Column(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: ListView.builder(
-                        itemCount: tracks.length,
-                        itemBuilder: (context, index) {
-                          final trackPage = tracks[index];
-                        return TracksPageDisplay(
-                          title: trackPage['title'] as String,
-                          description: trackPage['description'] as String,
-                        );
-                      }),
-                      ),
-                  ],
+          body: Column(
+            children: [
+              Expanded(
+                flex: 1,
+                child: ListView.builder(
+                  itemCount: tracks.length,
+                  itemBuilder: (context, index) {
+                    final trackPage = tracks[index];
+                  return TracksPageDisplay(
+                    title: trackPage['title'] as String,
+                    description: trackPage['description'] as String,
+                  );
+                }),
                 ),
-              ),
-            ),
+            ],
           ),
         ),
       ),
