@@ -169,6 +169,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.21.1"
+  fleet:
+    dependency: "direct main"
+    description:
+      name: fleet
+      sha256: c1dff34ca267049e0c543b753a7cdab6b448584d88cfc466876b7d118dda1df9
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0+1"
   flutter:
     dependency: "direct main"
     description: flutter
