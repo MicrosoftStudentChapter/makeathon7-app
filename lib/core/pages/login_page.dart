@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: child,
                 );
               },
-              transitionDuration: Duration(milliseconds: 600),
+              transitionDuration: Duration(milliseconds: 400),
             ),
           );
         }

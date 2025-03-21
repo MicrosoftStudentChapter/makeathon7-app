@@ -6,7 +6,7 @@ class MapPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var duration = Duration(milliseconds: 1000);
+    var duration = Duration(milliseconds: 400);
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(

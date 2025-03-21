@@ -8,7 +8,6 @@ class Announcements extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var duration = Duration(milliseconds: 600);
     ScrollController controller = ScrollController();
     return SafeArea(
       child: Container(
@@ -23,20 +22,7 @@ class Announcements extends StatelessWidget {
           appBar: AppBar(
             leading: GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation1, animation2) =>
-                          HomePageNavigator(),
-                      transitionsBuilder:
-                          (context, animation1, animation2, child) {
-                        return FadeTransition(
-                          opacity: animation1,
-                          child: child,
-                        );
-                      },
-                      transitionDuration: duration,
-                    ));
+                Navigator.pop(context);
               },
               child: Padding(
                 padding: const EdgeInsets.all(15.0),

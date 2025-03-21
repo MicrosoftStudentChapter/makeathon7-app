@@ -8,7 +8,7 @@ class TimelinePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var duration = Duration(milliseconds: 1000);
+    var duration = Duration(milliseconds: 400);
     ScrollController controller = ScrollController();
     return SafeArea(
       child: Container(

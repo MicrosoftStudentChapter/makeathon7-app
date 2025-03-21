@@ -7,7 +7,7 @@ class CallAMentor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var duration = Duration(milliseconds: 600);
+    var duration = Duration(milliseconds: 400);
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
