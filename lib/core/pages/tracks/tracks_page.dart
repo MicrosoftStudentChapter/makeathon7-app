@@ -3,9 +3,27 @@ import 'package:makeathon7/core/global_variables.dart';
 import 'package:makeathon7/core/pages/announcements/announcements.dart';
 import 'package:makeathon7/core/pages/tracks/widgets/tracks_button.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_pages/tracks1.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_pages/tracks2.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_pages/tracks3.dart';
+import 'package:makeathon7/core/pages/tracks/tracks_pages/tracks4.dart';
 
-class TracksPage extends StatelessWidget {
+class TracksPage extends StatefulWidget {
   const TracksPage({super.key});
+
+  @override
+  State<TracksPage> createState() => _TracksPageState();
+}
+
+class _TracksPageState extends State<TracksPage> {
+  int currentPage = 0;
+
+  List<Widget> pages = [
+    Tracks1(),
+    Tracks2(),
+    Tracks3(),
+    Tracks4(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -72,40 +90,124 @@ class TracksPage extends StatelessWidget {
                   height: 280,
                   width: 294,
                   decoration: BoxDecoration(
-                color: AppPallete.timelineBg,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(),
-                    spreadRadius: 4,
-                    blurRadius: 9,
-                    offset: Offset(0, 4), // changes position of shadow
-                  ),
-                ],
-              ),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 22,
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: ListView.builder(
-                          itemCount: tracks.length,
-                          itemBuilder: (context, index) {
-                            final trackButton = tracks[index];
-                            return Column(
-                              children: [
-                                TracksButton(
-                                  title: trackButton['title'] as String,
-                                  // icon: trackButton['icon'] as Image,
-                                ),
-                              ],
-                            );
-                          },
-                        ),
+                    color: AppPallete.timelineBg,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(),
+                        spreadRadius: 4,
+                        blurRadius: 9,
+                        offset: Offset(0, 4), // changes position of shadow
                       ),
                     ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                      GestureDetector(
+                        onTap: () {
+                        setState(() {
+                          currentPage = 0;
+                        });
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                pages[currentPage],
+                            transitionsBuilder:
+                                (context, animation1, animation2, child) {
+                              return FadeTransition(
+                                opacity: animation1,
+                                child: child,
+                              );
+                            },
+                            transitionDuration: duration,
+                          ),
+                        );
+                        },
+                        child: TracksButton(
+                        title: tracks[0]['title'] as String,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                        setState(() {
+                          currentPage = 1;
+                        });
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                pages[currentPage],
+                            transitionsBuilder:
+                                (context, animation1, animation2, child) {
+                              return FadeTransition(
+                                opacity: animation1,
+                                child: child,
+                              );
+                            },
+                            transitionDuration: duration,
+                          ),
+                        );
+                        },
+                        child: TracksButton(
+                        title: tracks[1]['title'] as String,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                        setState(() {
+                          currentPage = 2;
+                        });
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                pages[currentPage],
+                            transitionsBuilder:
+                                (context, animation1, animation2, child) {
+                              return FadeTransition(
+                                opacity: animation1,
+                                child: child,
+                              );
+                            },
+                            transitionDuration: duration,
+                          ),
+                        );
+                        },
+                        child: TracksButton(
+                        title: tracks[2]['title'] as String,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                        setState(() {
+                          currentPage = 3;
+                        });
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                pages[currentPage],
+                            transitionsBuilder:
+                                (context, animation1, animation2, child) {
+                              return FadeTransition(
+                                opacity: animation1,
+                                child: child,
+                              );
+                            },
+                            transitionDuration: duration,
+                          ),
+                        );
+                        },
+                        child: TracksButton(
+                        title: tracks[3]['title'] as String,
+                        ),
+                      ),
+                      ],
+                    ),
                   ),
                 ),
               ],
