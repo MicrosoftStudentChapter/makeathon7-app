@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C7684B6B7060469F8634B68 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEAA115A32F1D2AB87B111EE /* Pods_Runner.framework */; };
+		0C7684B6B7060469F8634B68 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEAA115A32F1D2AB87B111EE /* Pods_Runner.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		1B0322B274858518F6B0FCEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F70E41A93EAD9823A317571 /* GoogleService-Info.plist */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };

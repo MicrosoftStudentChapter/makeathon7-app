@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:makeathon7/controllers/upload_data.dart';
 import 'package:makeathon7/core/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      // options: DefaultFirebaseOptions.currentPlatform,
-      );
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
           thumbColor: WidgetStatePropertyAll(AppPallete.whiteOpac),
         ),
       ),
-      home: LoginPage(),
+      home: UploadExcelPage(),
     );
   }
 }
