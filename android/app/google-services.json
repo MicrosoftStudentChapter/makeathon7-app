@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "23981252288",
+    "project_id": "makeathon7-app",
+    "storage_bucket": "makeathon7-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23981252288:android:5c9b5df540d15ec6961725",
+        "android_client_info": {
+          "package_name": "com.mlsc.makeathon7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23981252288-j9e9og0smv2h8d39ptjmkmhqod9imjs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcrnyQLLZ0q50mkvf1-mZqr3pisJoq36w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23981252288-j9e9og0smv2h8d39ptjmkmhqod9imjs5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "23981252288-9iug991uj0qjk9qm7hbl3giduag6k35q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mlsc.makeathon7"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23981252288:android:bdff8a2242748fd4961725",
+        "android_client_info": {
+          "package_name": "com.mlsc.makeathon7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23981252288-j9e9og0smv2h8d39ptjmkmhqod9imjs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcrnyQLLZ0q50mkvf1-mZqr3pisJoq36w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23981252288-j9e9og0smv2h8d39ptjmkmhqod9imjs5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "23981252288-9iug991uj0qjk9qm7hbl3giduag6k35q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mlsc.makeathon7"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
