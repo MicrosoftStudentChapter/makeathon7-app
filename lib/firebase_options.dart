@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, TargetPlatform;
 
+/// Default [FirebaseOptions] for use with your Firebase apps.
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     switch (defaultTargetPlatform) {
@@ -15,20 +16,24 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  // Replace these values with your actual Firebase configuration
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDcrnyQLLZ0q50mkvf1-mZqr3pisJoq36w',
-    appId: '1:23981252288:android:5c9b5df540d15ec6961725',
-    messagingSenderId: '23981252288',
-    projectId: 'makeathon7-app',
-    storageBucket: 'makeathon7-app.firebasestorage.app',
+    apiKey: 'YOUR_API_KEY', // Replace with your actual API key
+    appId: 'YOUR_APP_ID', // Replace with your actual App ID
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
   );
 
+  // iOS configuration (if applicable)
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCymroe0z0D1LRSsECnsLh4G3AM3_26GJE',
-    appId: '1:23981252288:ios:8aff561268034533961725',
-    messagingSenderId: '23981252288',
-    projectId: 'makeathon7-app',
-    storageBucket: 'makeathon7-app.firebasestorage.app',
-    iosBundleId: 'com.mlsc.makeathon7',
+    apiKey: 'YOUR_IOS_API_KEY',
+    appId: 'YOUR_IOS_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    iosClientId: 'YOUR_IOS_CLIENT_ID',
+    iosBundleId: 'YOUR_IOS_BUNDLE_ID',
   );
 }

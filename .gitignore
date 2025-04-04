@@ -32,6 +32,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+.cxx
 
 # Symbolication related
 app.*.symbols
@@ -44,3 +45,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 android/app/google-services.json
+android/app/proguard-rules.pro
