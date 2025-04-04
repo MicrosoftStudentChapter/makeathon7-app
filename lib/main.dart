@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:makeathon7/controllers/upload_data.dart';
-import 'package:makeathon7/core/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:makeathon7/core/pages/login_page.dart';
 import 'package:makeathon7/theme/app_pallete.dart';
 
 void main() async {
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
           thumbColor: WidgetStatePropertyAll(AppPallete.whiteOpac),
         ),
       ),
-      home: UploadExcelPage(),
+      home: LoginPage(),
     );
   }
 }
